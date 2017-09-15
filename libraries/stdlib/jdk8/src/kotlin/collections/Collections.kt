@@ -15,7 +15,7 @@
  */
 
 @file:Suppress("UNCHECKED_CAST", "NOTHING_TO_INLINE", "INVISIBLE_MEMBER", "INVISIBLE_REFERENCE")
-@file:JvmName("CollectionsKt")
+@file:JvmName("CollectionsJDK8Kt")
 @file:kotlin.jvm.JvmPackageName("kotlin.collections.jdk8")
 package kotlin.collections
 

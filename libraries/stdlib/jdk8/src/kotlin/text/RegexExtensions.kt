@@ -15,7 +15,7 @@
  */
 
 @file:Suppress("INVISIBLE_MEMBER", "INVISIBLE_REFERENCE")
-@file:JvmName("RegexExtensionsKt")
+@file:JvmName("RegexExtensionsJDK8Kt")
 @file:kotlin.jvm.JvmPackageName("kotlin.text.jdk8")
 package kotlin.text
 
