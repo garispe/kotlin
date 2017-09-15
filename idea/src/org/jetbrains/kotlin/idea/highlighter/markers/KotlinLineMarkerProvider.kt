@@ -182,8 +182,8 @@ private val OVERRIDDEN_PROPERTY = object : MarkerType(
     }
 }
 
-private val PLATFORM_IMPLEMENTATION = MarkerType(
-        "PLATFORM_IMPLEMENTATION",
+private val PLATFORM_ACTUAL = MarkerType(
+        "PLATFORM_ACTUAL",
         { it?.let { getPlatformActualTooltip(it.parent as KtDeclaration) } },
         object : LineMarkerNavigator() {
             override fun browse(e: MouseEvent?, element: PsiElement?) {
@@ -192,8 +192,8 @@ private val PLATFORM_IMPLEMENTATION = MarkerType(
         }
 )
 
-private val HEADER_DECLARATION = MarkerType(
-        "HEADER_DECLARATION",
+private val EXPECTED_DECLARATION = MarkerType(
+        "EXPECTED_DECLARATION",
         { it?.let { getExpectedDeclarationTooltip(it.parent as KtDeclaration) } },
         object : LineMarkerNavigator() {
             override fun browse(e: MouseEvent?, element: PsiElement?) {
@@ -301,8 +301,8 @@ private fun collectActualMarkers(declaration: KtNamedDeclaration,
             anchor.textRange,
             KotlinIcons.FROM_HEADER,
             Pass.LINE_MARKERS,
-            PLATFORM_IMPLEMENTATION.tooltip,
-            PLATFORM_IMPLEMENTATION.navigationHandler,
+            PLATFORM_ACTUAL.tooltip,
+            PLATFORM_ACTUAL.navigationHandler,
             GutterIconRenderer.Alignment.RIGHT
     ))
 }
@@ -322,8 +322,8 @@ private fun collectExpectedMarkers(declaration: KtNamedDeclaration,
             anchor.textRange,
             KotlinIcons.FROM_IMPL,
             Pass.LINE_MARKERS,
-            HEADER_DECLARATION.tooltip,
-            HEADER_DECLARATION.navigationHandler,
+            EXPECTED_DECLARATION.tooltip,
+            EXPECTED_DECLARATION.navigationHandler,
             GutterIconRenderer.Alignment.RIGHT
     ))
 }
