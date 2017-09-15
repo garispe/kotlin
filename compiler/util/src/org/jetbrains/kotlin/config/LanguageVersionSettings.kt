@@ -65,6 +65,8 @@ enum class LanguageFeature(
     JvmPackageName(KOTLIN_1_2),
     AssigningArraysToVarargsInNamedFormInAnnotations(KOTLIN_1_2),
 
+    ContractEffects(KOTLIN_1_2),
+    CalledInPlaceEffect(KOTLIN_1_2),
     RestrictionOfValReassignmentViaBackingField(KOTLIN_1_3),
     NestedClassesInEnumEntryShouldBeInner(KOTLIN_1_3),
     ProhibitDataClassesOverridingCopy(KOTLIN_1_3),
