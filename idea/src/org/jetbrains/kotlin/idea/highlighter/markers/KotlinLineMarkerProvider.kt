@@ -100,10 +100,10 @@ class KotlinLineMarkerProvider : LineMarkerProvider {
         for (element in elements) {
             if (element !is KtNamedDeclaration) continue
 
-            if (element.hasExpectModifier() || element.hasModifier(KtTokens.EXPECT_KEYWORD)) {
+            if (element.hasExpectModifier()) {
                 collectActualMarkers(element, result)
             }
-            else if (element.hasActualModifier() || element.hasModifier(KtTokens.ACTUAL_KEYWORD)) {
+            else if (element.hasActualModifier()) {
                 collectExpectedMarkers(element, result)
             }
         }
