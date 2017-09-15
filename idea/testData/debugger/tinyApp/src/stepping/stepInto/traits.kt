@@ -2,7 +2,7 @@ package traits
 
 fun main(args: Array<String>) {
     //Breakpoint!
-    val actual = MyInterfaceImpl()
+    val impl = MyInterfaceImpl()
     impl.inInterface()
     impl.propInInterface
     impl.inInterfaceOverride()

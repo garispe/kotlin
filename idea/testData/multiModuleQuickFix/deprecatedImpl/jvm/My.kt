@@ -1,3 +1,3 @@
 // "Replace with 'actual'" "true"
 
-<caret>actual class My
+<caret>impl class My
