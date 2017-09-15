@@ -1,3 +1,3 @@
 // "Replace with 'expect'" "true"
 
-<caret>header class My
+<caret>expect class My
